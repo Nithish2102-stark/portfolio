@@ -1,0 +1,16 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Environment and system files
+.env
+.env.*
+.DS_Store
+*.tsbuildinfo
+
+# Temporary screenshot
+/Pasted 12-11-2026 at 16.27.55.png
+
+# Root-level personal documents
+/*.pdf
+/*.heic

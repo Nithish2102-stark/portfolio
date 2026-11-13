@@ -9,11 +9,13 @@ import {
 } from 'react';
 
 const emailAddress = 'asnithish125@gmail.com';
-const visionVoiceImage = '/images/visionvoice.png';
-const spendWiseImage = '/images/spendwise.png';
-const coldGuardImage = '/images/coldguard.png';
-const vistaImage = '/images/vista.png';
-const credentialAssets = '/assets/credentials';
+const publicUrl = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+const visionVoiceImage = publicUrl('images/visionvoice.png');
+const spendWiseImage = publicUrl('images/spendwise.png');
+const coldGuardImage = publicUrl('images/coldguard.png');
+const vistaImage = publicUrl('images/vista.png');
+const credentialAssets = publicUrl('assets/credentials');
 const socialLinks = [
   { label: 'Email', href: `mailto:${emailAddress}`, icon: 'mail' },
   {
@@ -807,7 +809,7 @@ function App() {
           <span className="nav-divider" />
           <a
             className="resume-link"
-            href="/resume.pdf"
+            href={publicUrl('resume.pdf')}
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
@@ -859,7 +861,7 @@ function App() {
             <div className="portrait-art">
               <img
                 className="portrait-image"
-                src="/images/prof.png"
+                src={publicUrl('images/prof.png')}
                 alt="Portrait of Nithish A S"
               />
               <div className="portrait-statement">
@@ -1127,7 +1129,7 @@ function App() {
             </div>
             <figure className="education-image">
               <img
-                src="/images/rathinam-campus.png"
+                src={publicUrl('images/rathinam-campus.png')}
                 alt="Aerial view of Rathinam Technical Campus in Coimbatore"
                 loading="lazy"
               />
